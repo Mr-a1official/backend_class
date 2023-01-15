@@ -1,0 +1,5 @@
+Cart system Update Quantity.
+
+*What I'm trying to do
+1-done. I should be able to calculate selected product total based on product Quantity
+2. 
