@@ -11,6 +11,12 @@ function get_user_login_data($table, $username)
         throw new Exception("Invalid username", 1);
     }
 }
+function get_all_users()
+{
+    $stmt = "SELECT * FROM users";
+    $stmt = mysqli_query(connection(), $stmt);
+    return $stmt;
+}
 function redirect($location)
 {
     return header("Location:" . $location);
