@@ -7,8 +7,6 @@ function get_user_login_data($table, $username)
     $stmt = mysqli_query(connection(), $sql);
     if (mysqli_num_rows($stmt) > 0) {
         return $stmt;
-    } else {
-        throw new Exception("Invalid username", 1);
     }
 }
 function get_all_users()
