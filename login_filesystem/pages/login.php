@@ -1,7 +1,4 @@
 <?php
-echo "<pre>";
-var_dump($_SERVER);
-die;
 require_once("../config/session.php");
 if (isset($_SESSION['user_status'])) {
    $_SESSION['success'] = "You are already logged in";

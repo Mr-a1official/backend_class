@@ -7,6 +7,7 @@ if (!isset($_SESSION['user_status'])) {
 }
 
 $user_id = $_SESSION['user_status'];
+echo $user_id;
 $data = get_all_users();
 ?>
 <!DOCTYPE html>
@@ -43,13 +44,15 @@ $data = get_all_users();
                <tr>
                   <th>Username</th>
                   <th>Password</th>
+                  <th>Profile</th>
                </tr>
                <?php foreach ($data as $key => $values) : ?>
-                  <?php if ($key == $user_id) : ?>
-                     <?php if ($key % 2 == 0) : ?>
+                  <?php if (trim($values) == trim($user_id)) : ?>
+                     <?php if ($key % 4 == 0) : ?>
                         <tr>
-                           <td><?= $values ?></td>
                            <td><?= $data[$key + 1] ?></td>
+                           <td><?= $data[$key + 2] ?></td>
+                           <td><img class="img-fluid w-25" src="../uploads/<?= $data[$key + 3] ?>" alt="" srcset=""></td>
                         </tr>
                      <?php endif; ?>
                   <?php endif; ?>

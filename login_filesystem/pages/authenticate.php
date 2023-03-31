@@ -9,10 +9,11 @@ try {
    $data = get_all_users();
    foreach ($data as $key => $value) {
       if (trim($value) == trim($username)) {
+         $id = trim($data[$key - 1]);
          $db_password = $data[$key + 1];
          if (trim($db_password) == trim(sha1($password))) {
             $_SESSION['success'] = "Login Successful";
-            $_SESSION['user_status'] = $key;
+            $_SESSION['user_status'] = $id;
             return header("location:profile.php");
          }
       }

@@ -28,7 +28,7 @@ if (isset($_SESSION['user_status'])) {
                <div class="alert alert-success mt-3 mb-3"><?= $_SESSION['success'] ?></div>
             <?php endif; ?>
 
-            <form action="store.php" method="post">
+            <form action="store.php" method="post" enctype="multipart/form-data">
                <div class="card">
                   <div class="card-header">
                      Signup
@@ -41,6 +41,10 @@ if (isset($_SESSION['user_status'])) {
                      <div class="form-group">
                         <label for="password">Password</label>
                         <input class="form-control" type="password" name="password" id="password">
+                     </div>
+                     <div class="form-group">
+                        <label for="profile">Profile</label>
+                        <input class="form-control" type="file" name="profile" id="profile">
                      </div>
                   </div>
                   <div class="card-footer">
