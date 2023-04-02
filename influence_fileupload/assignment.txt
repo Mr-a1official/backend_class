@@ -1,0 +1,4 @@
+student will be able to create account for their class 
+teacher for his/her class will be able to delete,create,edit,and view student
+teacher will be able to create account
+admin will be able to manage both student and teacher and perform the basic crud operation
